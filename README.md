@@ -2,6 +2,21 @@
 
 API Gateway + OpenAPI with Integration doesn't respect integration `httpMethod`
 
+Start localstack
+
+```bash
+docker-compose up
+```
+
+Run terraform
+
+```bash
+terraform init
+terraform apply
+```
+
+Once terraform is complete
+
 ```bash
 # Fetched from terraform.tfstate
 INGEST_URL=$(cat terraform.tfstate | jq .outputs.local_url.value --raw-output)
